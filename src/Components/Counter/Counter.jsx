@@ -1,6 +1,7 @@
 
 import { useState } from "react"
 import "./Counter.css"
+import "animate.css"
 
 
 export default function Counter(){
@@ -25,17 +26,17 @@ export default function Counter(){
    
 //counter buttons
     const Buttons = ()=>{
-        return  <article className="container__controls">
-        <button className="button__down" onClick={()=>counterOptions.buttonDown()}>-</button>
+        return  <article className="container__controls animate__animated animate__fadeIn">
+        <button className="button__down container__controls animate__animated  animate__bounce" onClick={()=>counterOptions.buttonDown()}>-</button>
         <p className="data__result" >{counter}</p>
-        <button className="button__up" onClick={()=>counterOptions.buttonUp()}>+</button>
+        <button className="button__up container__controls animate__animated animate__bounce" onClick={()=>counterOptions.buttonUp()}>+</button>
         <button className="button__reset" onClick={()=>counterOptions.buttonReset()}>RESET</button>
     </article>
     }
 
 
     return <section className="container__counter">
-            <h1>Counter</h1>
+            <h1 className="animate__animated animate__fadeIn">Counter</h1>
             
 
            <Buttons counter={counter} counterOptions={counterOptions} />
